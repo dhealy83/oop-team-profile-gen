@@ -1,3 +1,4 @@
+// Write functions to test for each of the following.
 const Manager = require("../lib/manager.js");
 
 describe("Manager", () => {

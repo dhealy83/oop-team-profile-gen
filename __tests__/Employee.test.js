@@ -3,7 +3,6 @@ const Employee = require("../lib/employee");
 
 describe("Employee", () => {
   it("Should return the employee name.", () => {
-    // Test value
     const empName = "David";
 
     const result = new Employee(empName, "", "");
