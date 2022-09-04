@@ -1,25 +1,36 @@
-// const inquirer = require("inquirer");
-// const fs = require("fs");
-// const { log } = require("console");
+const ProGen = require("inquirer");
 
-// inquirer
-// .prompt([
-//     {
-//         type: "input",
-//         message: "What is your name?",
-//         name: "name",
-//       },
-//       {
-//         type: "input",
-//         message: "What is your id.?,
-//         name: "id",
-//       },
-//       {
-//         type: "input",
-//         message: "what is your email?",
-//         name: "email",
-//       },
-// ])
+
+
+// Double check to see if this needs to make the new user profiles.
+const proGen = ProGen();
+
+
+
+
+const teamArray = [];
+
+
+
+inquirer
+.prompt([
+    {
+        type: "input",
+        message: "What is your name?",
+        name: "name",
+      },
+      {
+        type: "input",
+        message: "What is your id.?,
+        name: "id",
+      },
+      {
+        type: "list",
+        message: "what is your email?",
+        choices:"Engineer", "Manager"
+      
+      },
+])
 
 // Make a constructor function to take in employee data
 // name, age, ...
@@ -30,7 +41,7 @@ function Employees(name, id, email) {
   return;
 }
 
-const user1 = new Employees("David", 1, "drtjprdave@gmail.com");
+const Engineer = new Employees("David", 1, "drtjprdave@gmail.com");
 console.log(user1);
 const user2 = new Employees("David", 2, "drtjprdave@gmail.com");
 console.log(user1);

@@ -2,7 +2,7 @@
 const Intern = require("../lib/intern");
 
 describe("Intern", () => {
-  intName("Should return the interns name.", () => {
+  it("Should return the interns name.", () => {
     const intName = "Marshall";
 
     const result = new Intern(intName, "", "");
@@ -10,7 +10,6 @@ describe("Intern", () => {
     expect(result.getName()).toEqual(intName);
   });
 });
-// school
 // getSchool()
 describe("school", () => {
   it("Should return interns school.", () => {
