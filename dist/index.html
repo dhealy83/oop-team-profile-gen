@@ -1,5 +1,4 @@
-function generateHTML(teamArray) {
-  const template = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,37 +23,23 @@ function generateHTML(teamArray) {
         class="container row m-0 d-flex flex-wrap justify-content-center space-evenly"
       >
 
-    ${teamArray.map((employee) => {
-      let special;
-      if (employee.getRole() === "Manager") {
-        special = "Office_Number";
-      } else if (employee.getRole() === "Engineers") {
-        special = "GitHub";
-      } else {
-        special = "School";
-      }
-      return `<div
+    <div
             class="card shadow-md m-3 col-3 bg-primary shadow"
             style="width: 18rem"
           >
             <div class="card-body">
-              <h5 class="card-title">${employee.getName()}</h5>
+              <h5 class="card-title">David</h5>
               <p class="card-text text-white">
-                ${employee.getRole()}
+                Engineers
               </p>
             </div>
             <ul class="list-group list-group-flush bg-primary">
-              <li class="list-group-item">ID: ${employee.id}</li>
-              <li class="list-group-item">EMAIL: <a href="mailto:${
-                employee.email
-              }">${employee.email}</a>
+              <li class="list-group-item">ID: 001</li>
+              <li class="list-group-item">EMAIL: <a href="mailto:drtjprdave@gmail.com">drtjprdave@gmail.com</a>
               </li>
-              <li class="list-group-item">${special}: <a href="https://github.com/${
-        employee[special]
-      }" target= "_blank">${employee[special]}</a></li>
+              <li class="list-group-item">GitHub: <a href="https://github.com/dhealy83" target= "_blank">dhealy83</a></li>
             </ul>
-          </div>`;
-    })}
+          </div>
 
         <!-- Cards in here and fully built them out. Then add text dynamically. -->
         
@@ -64,9 +49,3 @@ function generateHTML(teamArray) {
     <script src="../index.js"></script>
   </body>
 </html>
-`;
-
-  return template;
-}
-
-module.exports = generateHTML;
